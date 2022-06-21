@@ -1,0 +1,45 @@
+body{
+background-color:#4AB1D8 ;
+}
+.img-logo{
+    width: 250px;
+margin-left: 40%;
+margin-top: 2%;
+margin-bottom: 2%;
+display:flex;
+align-items: flex-start;
+}
+.App-header{
+background-color: #4f56a2;
+margin: -20px;
+display: flex;
+justify-content: space-between;
+
+}
+.btn-sub{
+margin-right: 50px;
+margin-top: 4%;
+height: 40%;
+width: 10%;
+background-color: #4AB1D8 ;
+border-radius: 3px;
+border: 0ch;
+color: aliceblue;
+font-size: 20px;
+}
+.news-container{
+margin-top: 5%;
+
+width: 300px;
+padding: 4px;
+}
+
+.img-news{
+height: 170px;
+}
+.container{
+
+width: 300px;
+margin: 20%;
+
+}
