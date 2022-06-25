@@ -1,45 +1,46 @@
 
 /* import '../App.css'; */
 import React from "react";
-import logo from '../img/logo-white.png';
-import News from './News';
+/* import logo from '../img/logo-white.png'; */
+import { Footer } from "./Footer";
+import News1 from './News1';
+import News2 from './News2';
 import './Home.css'
+import './News.css'
+import './Footer.css'
+import './Header.css'
+import News3 from "./News3";
+import { Header } from "./Header";
 
-export const Home=()=> {
-  /* const [listNews, setListNews] = useState({});
-  useEffect(() => {
-    // DEMO: Para obtener los datos de la API en nuestro localhost
-    // URL API: https://newsapi.org/v2/everything?q=tesla&from=2021-06-19&sortBy=publishedAt&apiKey=0c76dce6efd947d0bd1f6ac1f4324b9e
-    const qInTitle = "tesla"; // noticias sobre "tesla"
-    const from = "2021-07-19"; // fecha noticias publicadas (desde)
-    const apiKey = "0c76dce6efd947d0bd1f6ac1f4324b9e"; // reemplazar tu API KEY
-    const url = `https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}`;
-    const request = new Request(url);
 
-    fetch(request)
-      .then((response) => response.json()) // convierte a JSON
-      .then((news) => {
-        // si todo es correcto lista los resultados en consola
-        console.log(news);
-        setListNews(news);
-      })
-      .catch((error) => {
-        // si hubo un error impreme los detalles en consola
-        console.log(error);
-      });
-  }, []);
- */
-//className="App"
+export const Home = () => {
+  
   return (
-    <div >
-      <header className="App-header">
-        <img className="img-logo" src={logo} alt="65465" />
-        <button className="btn-sub">Inicia Sesión</button>
-      </header>
-      <section>
-        <News/>
+    <div>
+    <div><Header /></div>
+      
+      {/* <div className="container">  */}
+
+      <section className="container-full">
+        <section>
+          <h1>Titulares</h1>
+          <News1 />
+        </section>
+
+        <section>
+          <h1>Noticias relacionadas</h1>
+          <News2 />
+        </section>
+        <section>
+          <h1>Lo más popular</h1>
+          <News3 />
+        </section>
       </section>
+      <Footer />
+
     </div>
+
+    /*    </div> */
   );
 }
 

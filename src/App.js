@@ -1,10 +1,12 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import Identity from "@arc-publishing/sdk-identity";
-import Perfil from "./Perfil";
-import Login from "./Login";
-import Registro from "./Registro";
+// import Perfil from "./Perfil";
+import Login from "./Components/Login";
 import PasswordForgotten from './Components/PasswordForgotten';
+import Home from "./Components/Home";
+import Registro from "./Components/Register";
+
 
 function App() {
   const urlBase = "https://api-sandbox.elcomercio.pe";
@@ -14,7 +16,7 @@ function App() {
 
   useEffect(() => {
     Identity.apiOrigin = urlBase;
-    handleLogged();
+    // handleLogged();
   });
 
   const handleLogged = () => {
@@ -51,11 +53,8 @@ function App() {
   return (
     <div className="App">
       <section>
-        {islogged ? (
-          <Perfil
-            handleCloseSession={handleCloseSession}
-            userprofile={userprofile}
-          />
+        {islogged ? ( //si esta logeado muestra
+            <Home />
         ) : (
           <Login
             handleLogged={handleLogged}
@@ -63,7 +62,6 @@ function App() {
             handleShowOlvide={handleShowOlvide}
           />
         )}
-
         {!islogged && (
           <>
             {showRegistro && <Registro handleLogged={handleLogged} />}

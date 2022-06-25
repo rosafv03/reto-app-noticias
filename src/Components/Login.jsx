@@ -1,8 +1,10 @@
 import '../App.css';
 import React, { useState, useEffect } from "react";
 import Identity from "@arc-publishing/sdk-identity";
+/* import Home from './Home';
+import Registro from './Register'; */
 
-function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
+function Login({ handleLogged  }) {
   const urlBase = "https://api-sandbox.elcomercio.pe";
   const [error, setError] = useState(false);
   const [dataLogin, setDataLogin] = useState({
@@ -28,10 +30,18 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
       .then((res) => {
         handleLogged();
       })
-      .catch((err) => {
+      .catch((error) => {
         setError("Correo o contraseña inválidos");
       });
   };
+
+  // const handleShowRegister = (e) =>{//agregado
+  //   e.preventDefault();
+  // }
+
+  // const handleShowRegister = () =>{//agregado
+  //   <Registro />
+  // }
 
   return (
     <div className="App">
@@ -58,7 +68,7 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
           />
           <br />
 
-          <a href="/passwordForgotten" className="link" onClick={handleShowOlvide}>
+          <a href="/passwordForgotten" className="link" >
             Olvide mi contraseña
           </a>
 
@@ -68,7 +78,7 @@ function Login({ handleLogged, handleShowRegister, handleShowOlvide }) {
           </button>
 
           <br />
-          <a href="/register" className="link" onClick={handleShowRegister}>
+          <a href="/register" className="link" >
             Registrarme
           </a>
         </form>
