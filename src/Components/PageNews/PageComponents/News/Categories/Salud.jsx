@@ -1,15 +1,15 @@
 import '../News.css'
 import React, { useState, useEffect } from "react";
 
-export const Deporte = () => {
+export const Salud = () => {
     const [listNews, setListNews] = useState({});
     useEffect(() => {
         // DEMO: Para obtener los datos de la API en nuestro localhost
         // URL API: https://newsapi.org/v2/everything?q=tesla&from=2021-06-19&sortBy=publishedAt&apiKey=0c76dce6efd947d0bd1f6ac1f4324b9e
-        const qInTitle = "deporte"; 
+        const qInTitle = "salud"; 
         const from = "2021-07-19"; // fecha noticias publicadas (desde)
         // const apiKey = "0c76dce6efd947d0bd1f6ac1f4324b9e"; // reemplazar tu API KEY
-        const apiKey = "4dea85dd6e2c47678dc558f73224f5d0";
+        const apiKey = "715c578422ca4358b813c26cc38b75c1";
         const url = `https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}&pageSize=4`;
 
 
@@ -49,4 +49,3 @@ export const Deporte = () => {
         </div>
     );
 }
-

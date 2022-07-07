@@ -1,27 +1,23 @@
 import React from 'react'
 import './Header.css'
-import { Search } from './Search'
+import { Search } from '../Search/Search'
 import { useNavigate,  } from 'react-router-dom';
 
 export const Header = () => {
+const navigate=useNavigate;
 
-    const navigate=useNavigate;
 const handleSport=()=>{
     navigate('./deporte')
 }
-
 const handleEconomia=()=>{
     navigate('./economia')
 }
-
 const handleSalud=()=>{
     navigate('./salud')
 }
-
 const handleTec=()=>{
     navigate('./tecnologia')
 }
-
     return (
         <header>
             <div className="top-nav">
@@ -40,7 +36,7 @@ const handleTec=()=>{
                     <li onClick={handleSport}><a href="/deporte">Deporte </a></li>
                 </ul>
             </div>
-            <Search />
+            <Search/>
         </header>
 
     )

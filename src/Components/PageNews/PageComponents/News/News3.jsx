@@ -3,17 +3,16 @@
 import './News.css'
 import React, { useState, useEffect } from "react";
 
-export const News2 = () => {
+export const News3 = () => {
   const [listNews, setListNews] = useState({});
   useEffect(() => {
     // DEMO: Para obtener los datos de la API en nuestro localhost
     // URL API: https://newsapi.org/v2/everything?q=tesla&from=2021-06-19&sortBy=publishedAt&apiKey=0c76dce6efd947d0bd1f6ac1f4324b9e
-    const qInTitle = "peru"; // noticias sobre "tesla"
+    const qInTitle = "tecnología"; // noticias sobre "tesla"
     const from = "2021-07-19"; // fecha noticias publicadas (desde)
     // const apiKey = "0c76dce6efd947d0bd1f6ac1f4324b9e"; // reemplazar tu API KEY
-    const apiKey= "4dea85dd6e2c47678dc558f73224f5d0";
-  
-    const url = `https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}&pageSize=3`;
+    const apiKey= "715c578422ca4358b813c26cc38b75c1";
+        const url = `https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}&pageSize=30`;
 
     const request = new Request(url);//url
 
@@ -31,7 +30,7 @@ export const News2 = () => {
   }, []);
 
   return (
-    <div className='container'>
+<div className='container'>
           {
             // DEMO: listado de noticias obtenidas
             listNews.articles &&
@@ -52,4 +51,4 @@ export const News2 = () => {
   );
 }
 
-export default News2;
+export default News3;

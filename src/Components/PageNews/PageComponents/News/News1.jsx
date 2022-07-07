@@ -6,7 +6,7 @@ export const News1 = () => {
   useEffect(() => {
     const qInTitle = "Pedro castillo"; // noticias sobre "tesla"
     const from = "2021-07-19"; // fecha noticias publicadas (desde)
-    const apiKey = "4dea85dd6e2c47678dc558f73224f5d0";
+    const apiKey = "715c578422ca4358b813c26cc38b75c1";
     const url = `https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}&pageSize=1`;
 
     const request = new Request(url);//url
@@ -56,4 +56,4 @@ export const News1 = () => {
     </body>
   )
 }
-export default News1;
+/* export default News1; */

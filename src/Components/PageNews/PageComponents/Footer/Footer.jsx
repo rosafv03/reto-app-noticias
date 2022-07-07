@@ -6,7 +6,7 @@ export const Footer = () => {
 	
   return (
 	
-    <section id="footer">
+    <footer id="footer">
 		
 		<div class="container">
 		
@@ -55,7 +55,7 @@ export const Footer = () => {
 			</div>			
 		
 		
-	</section>
+	</footer>
   )
 }
 

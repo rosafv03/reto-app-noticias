@@ -1,8 +1,6 @@
-import '../App.css';
+
 import React, { useState, useEffect } from "react";
 import Identity from "@arc-publishing/sdk-identity";
-/* import Home from './Home';
-import Registro from './Register'; */
 
 function Login({ handleLogged  }) {
   const urlBase = "https://api-sandbox.elcomercio.pe";

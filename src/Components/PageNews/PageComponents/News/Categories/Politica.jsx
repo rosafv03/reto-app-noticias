@@ -9,7 +9,7 @@ export const Politica = () => {
         const qInTitle = "politica"; 
         const from = "2021-07-19"; // fecha noticias publicadas (desde)
         // const apiKey = "0c76dce6efd947d0bd1f6ac1f4324b9e"; // reemplazar tu API KEY
-        const apiKey = "4dea85dd6e2c47678dc558f73224f5d0";
+        const apiKey = "715c578422ca4358b813c26cc38b75c1";
         const url = `https://newsapi.org/v2/everything?qInTitle=${qInTitle}&from=${from}language=en&apiKey=${apiKey}&pageSize=4`;
 
 
